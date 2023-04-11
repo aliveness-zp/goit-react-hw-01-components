@@ -1,7 +1,3 @@
-import user from './user';
-console.log(user);
-
-// { username, tag, location, avatar, stats }
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div class="profile">

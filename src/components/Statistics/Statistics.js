@@ -1,6 +1,3 @@
-import data from './data';
-console.log(data);
-
 export const Statistics = ({ title, stats }) => {
   return (
     <section class="statistics">
