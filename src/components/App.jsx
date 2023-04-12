@@ -1,10 +1,15 @@
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
 import { FriendList, FriendListItem } from './FriendList/FriendList';
+import {
+  TransactionHistory,
+  TrnsactionItem,
+} from './TransactionHistory/TransactionHistory';
 
 import data from './Statistics/data';
 import user from './Profile/user';
 import friends from './FriendList/friends';
+import transactions from './TransactionHistory/transactions';
 console.log(user);
 
 export const App = () => {
@@ -17,6 +22,8 @@ export const App = () => {
         flexDirection: 'column',
         fontSize: 40,
         color: '#010101',
+        backgroundColor: '#E9EBF3',
+        padding: '50px',
       }}
     >
       <Profile
@@ -27,51 +34,15 @@ export const App = () => {
         stats={user.stats}
       />
 
-      <Statistics title={data.title} stats={data.stats} />
+      <Statistics title={'Upload stats'} data={data} />
 
       <FriendList>
         <FriendListItem friends={friends} />
       </FriendList>
+
+      <TransactionHistory>
+        <TrnsactionItem transactions={transactions} />
+      </TransactionHistory>
     </div>
   );
 };
-
-// const friends = [
-//   {
-//     avatar: 'https://cdn-icons-png.flaticon.com/512/1998/1998592.png',
-//     name: 'Mango',
-//     isOnline: true,
-//     id: 1812,
-//   },
-//   {
-//     avatar: 'https://cdn-icons-png.flaticon.com/512/616/616438.png',
-//     name: 'Kiwi',
-//     isOnline: false,
-//     id: 1137,
-//   },
-// ];
-
-// const App = () => {
-//   return (
-//       <FriendList friends={friends}>
-//         <FriendListItem friends={friends} />
-//       </FriendList>
-//   );
-// };
-
-// const FriendList = (friends, children) => {
-//   return <ul class="friend-list">{children}</ul>;
-// };
-
-// const FriendListItem = friends => {
-//   return
-//   {
-//     friends.map(friend => (
-//       <li class="item">
-//         (<span class="status"></span>
-//         <img class="avatar" src="" alt="User avatar" width="48" />
-//         <p class="name">friend.name</p>)
-//       </li>
-//     ));
-//   }
-// };
