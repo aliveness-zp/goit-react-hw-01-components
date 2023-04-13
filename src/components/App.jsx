@@ -20,7 +20,7 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        fontSize: 40,
+        fontSize: 18,
         color: '#010101',
         backgroundColor: '#E9EBF3',
         padding: '50px',

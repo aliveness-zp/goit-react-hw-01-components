@@ -1,5 +1,5 @@
 .profile {
-  width: 500px;
+  width: 400px;
   padding: 30px;
   background-color: white;
 }
@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
 }
 
 .avatar {
@@ -17,4 +18,21 @@
   height: 150px;
   border-radius: 50%;
   background-color: burlywood;
+}
+
+.stats {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  background-color: #e9ebf3;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(100% / 3);
+  align-items: center;
+  border: 1px solid rgb(199, 198, 198);
+  padding: 10px;
+  /* justify-content: center; */
 }
