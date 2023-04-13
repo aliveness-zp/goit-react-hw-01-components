@@ -1,0 +1,31 @@
+.container {
+  background-color: white;
+  padding: 30px;
+}
+
+.transaction-history {
+  width: 400px;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+tr {
+  text-align: left;
+  /* border: 1px solid gray; */
+}
+
+th {
+  background-color: aquamarine;
+}
+
+thead,
+td,
+tr,
+th {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+tr:nth-child(2n) {
+  background-color: antiquewhite;
+}

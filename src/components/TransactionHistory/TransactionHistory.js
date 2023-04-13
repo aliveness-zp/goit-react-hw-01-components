@@ -1,7 +1,11 @@
+import PropTypes from 'prop-types';
+
+import css from './TransactionHistory.module.css';
+
 export const TransactionHistory = ({ children }) => {
   return (
-    <>
-      <table class="transaction-history">
+    <div className={css.container}>
+      <table className={css['transaction-history']}>
         <thead>
           <tr>
             <th>Type</th>
@@ -11,7 +15,7 @@ export const TransactionHistory = ({ children }) => {
         </thead>
         {children}
       </table>
-    </>
+    </div>
   );
 };
 
@@ -27,4 +31,12 @@ export const TrnsactionItem = ({ transactions }) => {
       ))}
     </tbody>
   );
+};
+
+TransactionHistory.propTypes = {
+  children: PropTypes.object,
+};
+
+TrnsactionItem.propTypes = {
+  transactions: PropTypes.array,
 };

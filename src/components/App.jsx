@@ -10,7 +10,6 @@ import data from './Statistics/data';
 import user from './Profile/user';
 import friends from './FriendList/friends';
 import transactions from './TransactionHistory/transactions';
-console.log(user);
 
 export const App = () => {
   return (
