@@ -5,7 +5,7 @@ import css from './Statistics.module.css';
 export const Statistics = ({ title, data }) => {
   return (
     <section className={css.statistics}>
-      <h2 className={css.title}>{title}</h2>
+      {title && <h2 className={css.title}>{title}</h2>}
 
       <ul className={css['stat-list']}>
         {data.map(({ id, label, percentage }) => (
@@ -20,7 +20,7 @@ export const Statistics = ({ title, data }) => {
             }}
           >
             <span className={css.label}>{label}</span>
-            <span className={css.percentage}>{percentage}</span>
+            <span className={css.percentage}>{percentage}%</span>
           </li>
         ))}
       </ul>
@@ -33,6 +33,6 @@ function getRandom(min, max) {
 }
 
 Statistics.propTypes = {
-  title: PropTypes.string,
-  data: PropTypes.array,
+  title: PropTypes.string.isRequired,
+  data: PropTypes.array.isRequired,
 };

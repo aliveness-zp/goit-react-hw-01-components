@@ -19,24 +19,6 @@ export const TransactionHistory = ({ children }) => {
   );
 };
 
-export const TrnsactionItem = ({ transactions }) => {
-  return (
-    <tbody>
-      {transactions.map(({ id, type, amount, currency }) => (
-        <tr key={id}>
-          <td>{type}</td>
-          <td>{amount}</td>
-          <td>{currency}</td>
-        </tr>
-      ))}
-    </tbody>
-  );
-};
-
 TransactionHistory.propTypes = {
-  children: PropTypes.object,
-};
-
-TrnsactionItem.propTypes = {
-  transactions: PropTypes.array,
+  children: PropTypes.object.isRequired,
 };

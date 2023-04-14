@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import css from './FriendList.module.css';
 
-export const FriendList = ({ children }) => {
+export const FriendList = ({ children, friends }) => {
   return <ul className={css['friend-list']}>{children}</ul>;
 };
 
@@ -26,9 +26,9 @@ export const FriendListItem = ({ friends }) => {
 };
 
 FriendList.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.object.isRequired,
 };
 
 FriendListItem.propTypes = {
-  friends: PropTypes.array,
+  friends: PropTypes.array.isRequired,
 };
