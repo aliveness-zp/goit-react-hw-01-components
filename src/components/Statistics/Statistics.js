@@ -33,6 +33,12 @@ function getRandom(min, max) {
 }
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
-  data: PropTypes.array.isRequired,
+  title: PropTypes.string,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
